@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머함수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+
+            // 1.setTimeOut
+            // =>지정한 시간 이후에 한번만 실행함
+            // setTimeout(function(){
+            //     document.write('2초뒤에 실행하깃!!🥰')
+            // },2000);
+
+
+            // 2.setInterval
+            // =>지정한 시간마다 계속 실행함
+            // setInterval(function(){
+            //     document.write('1초마다 계속 실행함')
+            // },1000);
+
+
+            // 3.clearInterval
+            // =>setInterval을 취소시킴
+
+
+            // var running = setInterval(function(){
+            //     document.write('1초마다 계속 실행함')
+            // },1000);
+
+            // setTimeout(function(){
+            //     clearInterval(running)
+            // },3000);
+
+
+            $('.box').css({
+                width:300,
+                height:300,
+                backgroundColor:"teal"
+            }).click(function(){
+                $(this).css({
+                    backgroundColor:"gold"
+                })
+            });
+
+            // *trigger()
+            // =>강제 이벤트 실행 
+
+            setTimeout(function(){
+                $('.box').trigger('click');
+            },2000);
+
+        });//end
+
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
